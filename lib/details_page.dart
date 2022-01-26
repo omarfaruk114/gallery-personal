@@ -4,16 +4,14 @@ class DetailsPage extends StatelessWidget {
   final String imagePath;
   final String title;
   final String photographer;
-  final String price;
   final String details;
   final int index;
   DetailsPage(
-      {@required this.imagePath,
-      @required this.title,
-      @required this.photographer,
-      @required this.price,
-      @required this.details,
-      @required this.index});
+      {required this.imagePath,
+      required this.title,
+      required this.photographer,
+      required this.details,
+      required this.index});
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -61,14 +59,6 @@ class DetailsPage extends StatelessWidget {
                             fontSize: 10,
                           ),
                         ),
-                        Text(
-                          price,
-                          style: TextStyle(
-                            color: Colors.lightBlueAccent,
-                            fontSize: 18,
-                            fontWeight: FontWeight.w400,
-                          ),
-                        ),
                         SizedBox(
                           height: 10,
                         ),
@@ -100,19 +90,6 @@ class DetailsPage extends StatelessWidget {
                       ),
                       SizedBox(
                         width: 15,
-                      ),
-                      Expanded(
-                        child: FlatButton(
-                          onPressed: () {},
-                          padding: EdgeInsets.symmetric(vertical: 15),
-                          color: Colors.lightBlueAccent,
-                          child: Text(
-                            'Buy',
-                            style: TextStyle(
-                              color: Colors.white,
-                            ),
-                          ),
-                        ),
                       ),
                     ],
                   )

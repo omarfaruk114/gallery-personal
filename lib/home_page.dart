@@ -4,7 +4,6 @@ import 'details_page.dart';
 List<ImageDetails> _images = [
   ImageDetails(
     imagePath: 'images/1.jpg',
-    price: '\$20.00',
     photographer: 'Martin Andres',
     title: 'New Year',
     details:
@@ -12,7 +11,6 @@ List<ImageDetails> _images = [
   ),
   ImageDetails(
     imagePath: 'images/2.jpg',
-    price: '\$10.00',
     photographer: 'Abraham Costa',
     title: 'Spring',
     details:
@@ -20,7 +18,6 @@ List<ImageDetails> _images = [
   ),
   ImageDetails(
     imagePath: 'images/3.jpg',
-    price: '\$30.00',
     photographer: 'Jamie Bryan',
     title: 'Casual Look',
     details:
@@ -28,7 +25,6 @@ List<ImageDetails> _images = [
   ),
   ImageDetails(
     imagePath: 'images/4.jpg',
-    price: '\$20.00',
     photographer: 'Jamie Bryan',
     title: 'New York',
     details:
@@ -36,7 +32,6 @@ List<ImageDetails> _images = [
   ),
   ImageDetails(
     imagePath: 'images/5.jpg',
-    price: '\$20.00',
     photographer: 'Jamie Bryan',
     title: 'New York',
     details:
@@ -44,7 +39,6 @@ List<ImageDetails> _images = [
   ),
   ImageDetails(
     imagePath: 'images/6.jpg',
-    price: '\$20.00',
     photographer: 'Jamie Bryan',
     title: 'New York',
     details:
@@ -52,7 +46,6 @@ List<ImageDetails> _images = [
   ),
   ImageDetails(
     imagePath: 'images/7.jpg',
-    price: '\$20.00',
     photographer: 'Jamie Bryan',
     title: 'New York',
     details:
@@ -60,7 +53,6 @@ List<ImageDetails> _images = [
   ),
   ImageDetails(
     imagePath: 'images/8.jpg',
-    price: '\$20.00',
     photographer: 'Jamie Bryan',
     title: 'New York',
     details:
@@ -68,7 +60,6 @@ List<ImageDetails> _images = [
   ),
   ImageDetails(
     imagePath: 'images/9.jpg',
-    price: '\$20.00',
     photographer: 'Jamie Bryan',
     title: 'New York',
     details:
@@ -76,7 +67,6 @@ List<ImageDetails> _images = [
   ),
   ImageDetails(
     imagePath: 'images/10.jpg',
-    price: '\$20.00',
     photographer: 'Jamie Bryan',
     title: 'New York',
     details:
@@ -84,7 +74,6 @@ List<ImageDetails> _images = [
   ),
   ImageDetails(
     imagePath: 'images/11.jpg',
-    price: '\$20.00',
     photographer: 'Jamie Bryan',
     title: 'New York',
     details:
@@ -92,7 +81,6 @@ List<ImageDetails> _images = [
   ),
   ImageDetails(
     imagePath: 'images/12.jpg',
-    price: '\$20.00',
     photographer: 'Jamie Bryan',
     title: 'New York',
     details:
@@ -100,7 +88,6 @@ List<ImageDetails> _images = [
   ),
   ImageDetails(
     imagePath: 'images/13.jpg',
-    price: '\$20.00',
     photographer: 'Jamie Bryan',
     title: 'New York',
     details:
@@ -108,7 +95,6 @@ List<ImageDetails> _images = [
   ),
   ImageDetails(
     imagePath: 'images/14.jpg',
-    price: '\$20.00',
     photographer: 'Matthew',
     title: 'Cone Ice Cream',
     details:
@@ -116,7 +102,6 @@ List<ImageDetails> _images = [
   ),
   ImageDetails(
     imagePath: 'images/15.jpg',
-    price: '\$25.00',
     photographer: 'Martin Sawyer',
     title: 'Pink Ice Cream',
     details:
@@ -124,7 +109,6 @@ List<ImageDetails> _images = [
   ),
   ImageDetails(
     imagePath: 'images/16.jpg',
-    price: '\$15.00',
     photographer: 'John Doe',
     title: 'Strawberry Ice Cream',
     details:
@@ -185,7 +169,6 @@ class HomePage extends StatelessWidget {
                               imagePath: _images[index].imagePath,
                               title: _images[index].title,
                               photographer: _images[index].photographer,
-                              price: _images[index].price,
                               details: _images[index].details,
                               index: index,
                             ),
@@ -219,15 +202,13 @@ class HomePage extends StatelessWidget {
 
 class ImageDetails {
   final String imagePath;
-  final String price;
   final String photographer;
   final String title;
   final String details;
   ImageDetails({
-    @required this.imagePath,
-    @required this.price,
-    @required this.photographer,
-    @required this.title,
-    @required this.details,
+    required this.imagePath,
+    required this.photographer,
+    required this.title,
+    required this.details,
   });
 }
