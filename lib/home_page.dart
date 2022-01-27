@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'details_page.dart';
+import 'package:flutter_windowmanager/flutter_windowmanager.dart';
 
 List<ImageDetails> _images = [
   ImageDetails(
@@ -116,7 +117,23 @@ List<ImageDetails> _images = [
   ),
 ];
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  secureScreen() async{
+    await FlutterWindowManager.addFlags(FlutterWindowManager.FLAG_SECURE);
+  }
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    secureScreen();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
